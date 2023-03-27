@@ -19,7 +19,7 @@ public class HashListAutocomplete implements Autocompletor {
 
     @Override
     public List<Term> topMatches(String prefix, int k) {
-        if (prefix.length() > MAX_PREFIX) {
+        if (prefix.length() >= MAX_PREFIX) {
             prefix = prefix.substring(0,MAX_PREFIX);
         }
         if (myMap.containsKey(prefix)) {
